@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ella Es Angelita</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Ella Es Angelita</h1>
+    </header>
+    <section class="gallery">
+        <button class="arrow left" onclick="prevImage()">&#10094;</button>
+        <figure id="artwork-container" class="artwork-container">
+            <img id="artwork-image" src="" alt="">
+            <figcaption>
+                <h2 id="artwork-title"></h2>
+                <p id="artwork-description"></p>
+            </figcaption>
+        </figure>
+        <button class="arrow right" onclick="nextImage()">&#10095;</button>
+    </section>
+
+    <nav class="social-bar">
+        <a href="https://facebook.com" target="_blank" class="social-icon">
+            <img src="resources/social-media/fb.png" alt="Facebook">
+        </a>
+        <a href="https://twitter.com" target="_blank" class="social-icon">
+            <img src="resources/social-media/x.jpeg" alt="Twitter">
+        </a>
+        <a href="https://instagram.com" target="_blank" class="social-icon">
+            <img src="resources/social-media/ig.png" alt="Instagram">
+        </a>
+    </nav>
+
+    <script>
+        let currentIndex = 0;
+        let artworks = [];
+
+        function displayArtwork(index) {
+            const artwork = artworks[index];
+            document.getElementById('artwork-image').src = window.URL + '/' + artwork.url;
+            document.getElementById('artwork-image').alt = artwork.title;
+            document.getElementById('artwork-title').innerText = artwork.title;
+            document.getElementById('artwork-description').innerText = artwork.description;
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % artworks.length;
+            displayArtwork(currentIndex);
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + artworks.length) % artworks.length;
+            displayArtwork(currentIndex);
+        }
+
+        fetch('image.json')
+            .then(response => response.json())
+            .then(data => {
+                artworks = data;
+                displayArtwork(currentIndex);
+            })
+            .catch(error => console.error('Error fetching JSON:', error));
+    </script>
+</body>
+</html>
