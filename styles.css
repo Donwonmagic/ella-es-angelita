@@ -36,25 +36,6 @@ header {
 .artwork-container figcaption h2, .artwork-container figcaption p {
     margin: 10px 0;
 }
-.arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    user-select: none;
-}
-.arrow.left {
-    left: 10px;
-}
-.arrow.right {
-    right: 10px;
-}
-.arrow:hover {
-    color: #333;
-}
 .social-bar {
     position: absolute;
     bottom: 10px;
