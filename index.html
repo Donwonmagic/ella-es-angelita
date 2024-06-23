@@ -10,17 +10,7 @@
     <header>
         <h1>Ella Es Angelita</h1>
     </header>
-    <section class="gallery">
-        <button class="arrow left" onclick="prevImage()">&#10094;</button>
-        <figure id="artwork-container" class="artwork-container">
-            <img id="artwork-image" src="" alt="">
-            <figcaption>
-                <h2 id="artwork-title"></h2>
-                <p id="artwork-description"></p>
-            </figcaption>
-        </figure>
-        <button class="arrow right" onclick="nextImage()">&#10095;</button>
-    </section>
+
 
     <nav class="social-bar">
         <a href="https://facebook.com" target="_blank" class="social-icon">
@@ -35,25 +25,12 @@
     </nav>
 
     <script>
-        let currentIndex = 0;
-        let artworks = [];
-
         function displayArtwork(index) {
             const artwork = artworks[index];
             document.getElementById('artwork-image').src = window.location.href + artwork.url;
             document.getElementById('artwork-image').alt = artwork.title;
             document.getElementById('artwork-title').innerText = artwork.title;
             document.getElementById('artwork-description').innerText = artwork.description;
-        }
-
-        function nextImage() {
-            currentIndex = (currentIndex + 1) % artworks.length;
-            displayArtwork(currentIndex);
-        }
-
-        function prevImage() {
-            currentIndex = (currentIndex - 1 + artworks.length) % artworks.length;
-            displayArtwork(currentIndex);
         }
 
         fetch('image.json')
