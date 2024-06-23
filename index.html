@@ -40,7 +40,7 @@
 
         function displayArtwork(index) {
             const artwork = artworks[index];
-            document.getElementById('artwork-image').src = window.URL + '/' + artwork.url;
+            document.getElementById('artwork-image').src = window.location.href + artwork.url;
             document.getElementById('artwork-image').alt = artwork.title;
             document.getElementById('artwork-title').innerText = artwork.title;
             document.getElementById('artwork-description').innerText = artwork.description;
