@@ -5,27 +5,7 @@ header img {
     width: 350px;
     height: 350px;
 }
-.gallery {
-    position: relative;
-    max-width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.artwork-container {
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.artwork-container img {
-    width: 100%;
-    max-width: 600px; /* Ensure the image doesn't exceed a certain width */
-    height: 400px; /* Fixed height for the images */
-    object-fit: cover; /* Ensures the image covers the area without stretching */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+
 .social-bar {
     position: absolute;
     bottom: 10px;

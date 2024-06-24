@@ -1,32 +1,8 @@
 {
-    "header" : {
-        "hero-image" : "resources/images/sample-1.png", 
-        "title" : "Ella es Angelita"
+    "header": {
+        "hero-image": "resources/images/sample-1.png",
+        "title": "Ella es Angelita"
     },
-    
-    "image-gallery" : [
-        {
-            "url": "resources/images/sample-1.png",
-            "title": "Artwork 1",
-            "description": "Description of artwork 1"
-        },
-        {
-            "url": "resources/images/sample-2.png",
-            "title": "Artwork 2",
-            "description": "Description of artwork 2"
-        },
-        {
-            "url": "resources/images/sample-3.png",
-            "title": "Artwork 3",
-            "description": "Description of artwork 3"
-        },
-        {
-            "url": "resources/images/sample-4.png",
-            "title": "Artwork 4",
-            "description": "Description of artwork 4"
-        }
-    ],
-
     "footer": {
         "social-links": [
             {
@@ -36,7 +12,7 @@
             },
             {
                 "href": "https://twitter.com",
-                "src": "resources/social-media/x.jpeg",
+                "src": "resources/social-media/x.png",
                 "alt": "Twitter"
             },
             {
