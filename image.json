@@ -25,6 +25,25 @@
             "title": "Artwork 4",
             "description": "Description of artwork 4"
         }
-    ]
-    
+    ],
+
+    "footer": {
+        "social-links": [
+            {
+                "href": "https://facebook.com",
+                "src": "resources/social-media/fb.png",
+                "alt": "Facebook"
+            },
+            {
+                "href": "https://twitter.com",
+                "src": "resources/social-media/x.jpeg",
+                "alt": "Twitter"
+            },
+            {
+                "href": "https://instagram.com",
+                "src": "resources/social-media/ig.png",
+                "alt": "Instagram"
+            }
+        ]
+    }
 }
