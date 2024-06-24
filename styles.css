@@ -12,6 +12,10 @@ body {
 header {
     text-align: center;
 }
+header img {
+    width: 350px;
+    height: 350px;
+}
 .gallery {
     position: relative;
     max-width: 100%;
@@ -32,9 +36,6 @@ header {
     object-fit: cover; /* Ensures the image covers the area without stretching */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.artwork-container figcaption h2, .artwork-container figcaption p {
-    margin: 10px 0;
 }
 .social-bar {
     position: absolute;
