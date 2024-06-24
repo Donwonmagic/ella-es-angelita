@@ -3,6 +3,7 @@
         "hero-image" : "resources/images/sample-1.png", 
         "title" : "Ella es Angelita"
     },
+    
     "image-gallery" : [
         {
             "url": "resources/images/sample-1.png",

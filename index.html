@@ -26,20 +26,13 @@
 </footer>
 
     <script>
-        function displayArtwork(index) {
-            const artwork = artworks[index];
-            document.getElementById('artwork-image').src = window.location.href + artwork.url;
-            document.getElementById('artwork-image').alt = artwork.title;
-            document.getElementById('artwork-title').innerText = artwork.title;
-            document.getElementById('artwork-description').innerText = artwork.description;
-        }
-
         fetch('image.json')
             .then(response => response.json())
             .then(data => {
-                artworks = data;
-                displayArtwork(currentIndex);
-            })
+                document.getElementById('hero-image').src = data.header['hero-image'];
+                document.getElementById('title').innerText = data.header.title;
+            }
+        )
             .catch(error => console.error('Error fetching JSON:', error));
     </script>
 </body>
