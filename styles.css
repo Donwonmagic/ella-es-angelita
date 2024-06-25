@@ -8,11 +8,10 @@ header img {
 
 .social-bar {
     display: flex;
-    gap: 20px;
     justify-content: center;
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
+    align-items: center;
+    padding: 20px;
+    margin-top: auto;
 }
 .social-icon img {
     width: 40px;
