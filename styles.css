@@ -7,10 +7,12 @@ header img {
 }
 
 .social-bar {
-    position: absolute;
-    bottom: 10px;
     display: flex;
     gap: 20px;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
 }
 .social-icon img {
     width: 40px;
